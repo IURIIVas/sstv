@@ -9,7 +9,7 @@ class SlowScanTelevision:
         self._args = parser.args
 
     def run(self):
-        mode = Robot8Bw(self._args.f)
+        mode = Robot8Bw(self._args.f, self._args.sr)
 
         mode.code()
 

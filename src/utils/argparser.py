@@ -31,6 +31,11 @@ class ArgParser:
             action='store_true',
             help='Decode sound file'
         )
+        self._parser.add_argument(
+            '-sr',
+            type=int,
+            help='sample rate in Hz'
+        )
 
         self._parser.add_argument(
             '-f',

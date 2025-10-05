@@ -13,6 +13,13 @@ class ImageProcess:
     def pixels(self):
         return np.array(self._im)
 
+    def im_show(self, pixels: np.array) -> None:
+        im = Image.fromarray(pixels)
+        im.show()
+
+    def im_bw_convert(self) -> None:
+        self._im = self._im.convert("L")
+
     def im_open(self, im_path: str) -> bool:
         try:
             self._im = Image.open(im_path)
